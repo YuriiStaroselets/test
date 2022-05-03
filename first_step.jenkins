@@ -14,7 +14,7 @@ pipeline {
         stage("Login docker") {
             steps {
                 echo "============ Docker login ============="
-                withCredentials([usernamePassword(credentialsId: 'dockerhub_visotskiy', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+                withCredentials([usernamePassword(credentialsId: '040f3bac-42e5-4826-869f-26e6f57cfd17', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                     sh """
                     docker login -u $USERNAME -p $PASSWORD
                     """
@@ -24,7 +24,7 @@ pipeline {
         stage("Create docker") {
             steps {
                 echo "============ start building image ============="
-                sh 'docker build -t 040f3bac-42e5-4826-869f-26e6f57cfd17/testb:0.1 . '
+                sh 'docker build -t visotskiyw4o/testb:0.1 . '
             }
         }
         stage("Run docker") {
@@ -35,7 +35,7 @@ pipeline {
         stage("Push docker to docker hub") {
             steps {
                 sh '''
-                docker push 040f3bac-42e5-4826-869f-26e6f57cfd17/testb:0.1
+                docker push visotskiyw4o/testb:0.1
                 '''
             }
         }
