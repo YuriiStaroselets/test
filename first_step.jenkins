@@ -35,7 +35,7 @@ pipeline {
         stage("Push docker to docker hub") {
             steps {
                 sh '''
-                docker push knmyuiistaroselts/testass:0.1
+                docker push knmyuiistaroselts/testass
                 '''
             }
         }
