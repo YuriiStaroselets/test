@@ -11,8 +11,6 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("Login docker") {
-        }
         stage("Create docker") {
             steps {
                 echo "============ start building image ============="
