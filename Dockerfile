@@ -1,7 +1,7 @@
 FROM python:latest
-LABEL Mainteiner="visotkiyw4o"
+LABEL Mainteiner="knmyuriistaroselets"
 
-WORKDIR /home/wit4er/mydocker
+WORKDIR /home/labydaos/test/test
 COPY test1.py ./
 
 CMD [ "python3", "./test1.py"]
