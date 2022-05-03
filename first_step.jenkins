@@ -29,7 +29,7 @@ pipeline {
         }
         stage("Run docker") {
             steps {
-                sh 'docker run testass:0.1'
+                sh 'docker run knmyuriistaroselets/testass:0.1'
             }
         }
         stage("Push docker to docker hub") {
